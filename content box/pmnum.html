@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+    <link rel="stylesheet" href="prmnum.css">
+</head>
+<body>
+    <h1>PrimeNumber</h1>
+    <div class="box">
+        <input type="text" name="n1" id="n1">
+        <button type="button" onclick="checkprime()">Check</button>
+         <h3 id="ans"></h3>
+    </div>
+</body>
+     <script>
+         function checkprime(){
+            let b = document.getElementById("n1").value;
+            if(b>0){
+                let a = Number(b);
+                let factor = 0;
+                for(let m=1; m <=a ; m++){
+                    if(a%m == 0){
+                        factor++;
+                    }
+                }
+                if(factor==2){
+                    document.getElementById("ans").innerHTML="prime Number";
+
+                }
+                else{
+                    document.getElementById("ans").innerHTML= "not a prime number";
+                }
+            }
+        }
+
+    </script>
+</html> 

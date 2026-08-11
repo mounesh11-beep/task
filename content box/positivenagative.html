@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prmnum.css">
+</head>
+<body>
+    <h1>Positive/Negative</h1>
+    <div class="box">
+        <form action="" name="k">
+        <input type="text" name="i">
+        <button type="button" onclick="output()">Check</button>
+        </form>
+    </div>
+    <h3 id="ot"></h3>
+</body>
+    <script>
+        function output(){
+            let a = document.k.i.value;
+            if(a>0){
+                document.getElementById("ot").innerHTML="Positive";
+            }
+            else if(a==0){
+                 document.getElementById("ot").innerHTML="Neutral number";
+            }
+            else{
+                document.getElementById("ot").innerHTML="Negative";
+            }
+         }
+    </script>
+</html>

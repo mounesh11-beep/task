@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+    <link rel="stylesheet" href="prmnum.css">
+</head>
+<body>
+    <div class="box">
+    <h1>Armstrong Number</h1>
+    <form action="#" name="k">
+        <input type="text" name="i" id="inp">
+        <button type="button" onclick="output()">Check</button>
+        <h3 id="ans"></h3>
+    </form>
+    </div>
+</body>
+    <script>
+     function output() {
+    let num = document.getElementById("inp").value;
+
+    let sum = 0;
+    let temp = num;
+
+    while (temp > 0) {
+        let digit = temp % 10;
+        sum = sum + digit * digit * digit;
+        temp = Math.floor(temp / 10);
+    }
+
+    if (sum == num) {
+        document.getElementById("ans").innerHTML = "Armstrong Number";
+    } else {
+        document.getElementById("ans").innerHTML = "Not Armstrong Number";
+    }
+}
+    </script>
+</html>
